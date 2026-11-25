@@ -12,7 +12,7 @@ const BERITA = [
     id: "pembuatan-parit-dan-pengerasan-jalan-di-pondok-pesantren-madinah",       // unik, huruf kecil, pakai tanda hubung
     judul: "PLN UID S2JB Realisasikan Program TJSL Jalan dan Parit di Ponpes Madinah Muara Tembesi",
     kategori: "Berita",
-    tanggal: "2026-11-20",                    // format: TAHUN-BULAN-TANGGAL
+    tanggal: "2026-11-25",                    // format: TAHUN-BULAN-TANGGAL
     ringkasan: "PLN UID S2JB Bangun Jalan dan Parit di Ponpes Madinah Muara Tembesi.",
     gambar: "img/bantuan.jpg",                               // contoh: "img/pendaftaran.jpg" (kosong = kotak hijau)
     alt: "",                                  // deskripsi gambar, untuk aksesibilitas
