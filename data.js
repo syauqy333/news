@@ -30,7 +30,7 @@ const BERITA = [
     judul: "Santri Ikuti Lomba Tahfidz Tingkat Provinsi",
     kategori: "Kegiatan",
     tanggal: "2026-11-15",
-    ringkasan: "Tiga santri Madinah mewakili pondok dalam lomba tahfidz yang digelar di Bandar Lampung.",
+    ringkasan: "Tiga santri Madinah mewakili pondok dalam lomba tahfidz.",
     gambar: "",
     alt: "",
     isi: [
