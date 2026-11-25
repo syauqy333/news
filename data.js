@@ -25,4 +25,5 @@ const BERITA = [
       "Secara keseluruhan, program ini ditargetkan memberikan manfaat langsung kepada lebih dari 80 santri dan tenaga pendidik, serta manfaat tidak langsung bagi lebih dari 300 warga sekitar. Selain memperkuat sinergi antara dunia usaha, masyarakat, dan lembaga pendidikan keagamaan, langkah ini juga sejalan dengan komitmen keberlanjutan (ESG) dan dukungan terhadap pembangunan infrastruktur daerah."
     ]
   },
+   ];
   
