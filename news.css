@@ -1,371 +1,151 @@
-/* =========================================================
-   News Ponpes Madinah — news.css
-   Dipakai oleh berita.html dan berita-detail.html
-   Warna: hijau tua + emas. Tanpa JavaScript.
-   ========================================================= */
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Ponpes Madinah</title>
+  <meta name="description" content="Kabar terbaru dan kegiatan Pondok Pesantren Madinah.">
+  
+  <!-- Favicon menggunakan logo -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="news.css">
 
-:root {
-  --hijau-tua: #1b4332;
-  --hijau: #2d6a4f;
-  --hijau-muda: #e4efe8;
-  --emas: #b8862b;
-  --emas-muda: #f3e6c4;
-  --latar: #f5f7f4;
-  --kartu: #ffffff;
-  --teks: #1c2822;
-  --teks-lembut: #5a6a61;
-  --garis: #d8e0da;
-  --radius: 10px;
-  --lebar: 1080px;
-  --font-judul: "Source Serif 4", "Georgia", "Times New Roman", serif;
-  --font-isi: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
-}
+  <style>
+    /* Pengaturan Logo & Pemotongan Sudut Putih */
+    .merek {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
 
-*, *::before, *::after { box-sizing: border-box; }
+    .logo-ponpes {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%; /* Memotong pinggiran putih di sudut menjadi bulat */
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    }
 
-html { scroll-behavior: smooth; }
+    /* Penyesuaian agar nyaman dilihat di HP / Mobile */
+    @media (max-width: 640px) {
+      .header .wadah {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
 
-body {
-  margin: 0;
-  background: var(--latar);
-  color: var(--teks);
-  font-family: var(--font-isi);
-  font-size: 16px;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-}
+      .merek {
+        font-size: 1.05rem;
+        gap: 8px;
+      }
 
-img { max-width: 100%; display: block; }
-a { color: var(--hijau); text-decoration: none; }
-a:hover { text-decoration: underline; }
-a:focus-visible, summary:focus-visible {
-  outline: 3px solid var(--emas);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
+      .logo-ponpes {
+        width: 34px;
+        height: 34px;
+      }
 
-.wadah {
-  width: 100%;
-  max-width: var(--lebar);
-  margin: 0 auto;
-  padding: 0 20px;
-}
+      .menu {
+        display: flex;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+      }
 
-/* ---------- Header / menu ---------- */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--hijau-tua);
-  border-bottom: 3px solid var(--emas);
-}
-.header .wadah {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 62px;
-}
-.merek {
-  font-family: var(--font-judul);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #fff;
-  white-space: nowrap;
-}
-.merek:hover { text-decoration: none; }
-.menu {
-  display: flex;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.menu::-webkit-scrollbar { display: none; }
-.menu a {
-  display: block;
-  padding: 8px 12px;
-  color: #d4e3da;
-  font-size: 0.92rem;
-  font-weight: 500;
-  border-radius: 6px;
-  white-space: nowrap;
-}
-.menu a:hover { background: rgba(255, 255, 255, 0.1); text-decoration: none; }
-.menu a[aria-current="page"] {
-  background: var(--emas);
-  color: #fff;
-  font-weight: 700;
-}
+      .judul-halaman h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
 
-/* ---------- Judul halaman ---------- */
-.judul-halaman {
-  padding: 48px 0 28px;
-}
-.judul-halaman h1 {
-  margin: 0 0 8px;
-  font-family: var(--font-judul);
-  font-size: clamp(1.9rem, 5vw, 2.8rem);
-  line-height: 1.15;
-  color: var(--hijau-tua);
-}
-.judul-halaman p {
-  margin: 0;
-  max-width: 56ch;
-  color: var(--teks-lembut);
-}
+      .judul-halaman p {
+        font-size: 0.92rem;
+      }
 
-/* ---------- Penanda kategori + tanggal ---------- */
-.info {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.85rem;
-  color: var(--teks-lembut);
-}
-.kategori {
-  padding: 2px 10px;
-  background: var(--emas-muda);
-  color: #7a5614;
-  border-radius: 999px;
-  font-weight: 600;
-}
+      /* Kolom pencarian & filter lebih nyaman disentuh di layar HP */
+      .alat {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
 
-/* ---------- Berita utama ---------- */
-.utama {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  background: var(--kartu);
-  border: 1px solid var(--garis);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.utama .gambar { min-height: 280px; }
-.utama .isi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
-  padding: 32px;
-}
-.utama h2 {
-  margin: 0;
-  font-family: var(--font-judul);
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  line-height: 1.25;
-}
-.utama h2 a { color: var(--hijau-tua); }
-.utama p { margin: 0; color: var(--teks-lembut); }
+      .cari {
+        width: 100%;
+        font-size: 16px; /* Mencegah auto-zoom saat mengetik di browser HP */
+        padding: 10px 14px;
+      }
 
-/* ---------- Gambar placeholder (ganti dengan <img>) ---------- */
-.gambar {
-  background:
-    linear-gradient(135deg, var(--hijau) 0%, var(--hijau-tua) 100%);
-  position: relative;
-}
-.gambar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+      .filter {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
 
-/* ---------- Daftar berita ---------- */
-.bagian-judul {
-  margin: 44px 0 16px;
-  font-family: var(--font-judul);
-  font-size: 1.4rem;
-  color: var(--hijau-tua);
-}
-.daftar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding-bottom: 56px;
-}
-.kartu {
-  display: flex;
-  flex-direction: column;
-  background: var(--kartu);
-  border: 1px solid var(--garis);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.kartu .gambar { aspect-ratio: 16 / 9; }
-.kartu .isi {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 18px 18px 20px;
-  flex: 1;
-}
-.kartu h3 {
-  margin: 0;
-  font-family: var(--font-judul);
-  font-size: 1.15rem;
-  line-height: 1.3;
-}
-.kartu h3 a { color: var(--teks); }
-.kartu h3 a:hover { color: var(--hijau); }
-.kartu p {
-  margin: 0;
-  font-size: 0.93rem;
-  color: var(--teks-lembut);
-}
+      .filter button {
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+<body data-halaman="daftar">
 
-/* ---------- Halaman detail ---------- */
-.artikel {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 40px 20px 64px;
-}
-.artikel .kembali {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-.artikel h1 {
-  margin: 12px 0 14px;
-  font-family: var(--font-judul);
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  line-height: 1.2;
-  color: var(--hijau-tua);
-}
-.artikel .gambar {
-  aspect-ratio: 16 / 9;
-  margin: 24px 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.artikel .badan {
-  font-family: var(--font-judul);
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-.artikel .badan p { margin: 0 0 1.2em; }
-.artikel .badan h2 {
-  margin: 1.8em 0 0.6em;
-  font-size: 1.4rem;
-  color: var(--hijau-tua);
-}
-.artikel blockquote {
-  margin: 1.5em 0;
-  padding: 4px 0 4px 20px;
-  border-left: 4px solid var(--emas);
-  color: var(--hijau-tua);
-  font-style: italic;
-}
+  <header class="header">
+    <div class="wadah">
+      <a class="merek" href="index.html">
+        <img src="logo.jpg" alt="Logo Pondok Pesantren Madinah" class="logo-ponpes">
+        <span>News Ponpes Madinah</span>
+      </a>
+      <nav aria-label="Menu utama">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Berita</a></li>
+          <li><a class="luar" href="/" data-situs>Situs Ponpes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-/* ---------- Footer ---------- */
-.footer {
-  background: var(--hijau-tua);
-  color: #b9cfc2;
-  padding: 28px 0;
-  font-size: 0.9rem;
-  text-align: center;
-}
-.footer strong { color: #fff; }
+  <main>
+    <div class="wadah">
+      <section class="judul-halaman">
+        <h1>News Ponpes Madinah</h1>
+        <p>Kabar terbaru, kegiatan santri, dan pengumuman dari Pondok Pesantren Madinah.</p>
+      </section>
 
-/* ---------- Responsif ---------- */
-@media (max-width: 860px) {
-  .utama { grid-template-columns: 1fr; }
-  .utama .gambar { min-height: 200px; aspect-ratio: 16 / 9; }
-  .utama .isi { padding: 22px; }
-  .daftar { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .daftar { grid-template-columns: 1fr; }
-  .judul-halaman { padding-top: 32px; }
-}
+      <div class="alat">
+        <input id="cari" class="cari" type="search" placeholder="Cari berita" aria-label="Cari berita">
+        <div id="filter" class="filter" role="group" aria-label="Filter kategori"></div>
+      </div>
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
+      <div id="utama-wadah"></div>
 
-/* =========================================================
-   Tambahan untuk versi JS: pencarian, filter, tombol, dll
-   ========================================================= */
-.alat {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 16px;
-  margin-bottom: 24px;
-}
-.cari {
-  flex: 1 1 240px;
-  max-width: 360px;
-  padding: 10px 14px;
-  border: 1px solid var(--garis);
-  border-radius: 999px;
-  background: var(--kartu);
-  color: var(--teks);
-  font: inherit;
-  font-size: 0.95rem;
-}
-.cari:focus-visible { outline: 3px solid var(--emas); outline-offset: 2px; }
-.filter { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  padding: 7px 14px;
-  border: 1px solid var(--garis);
-  border-radius: 999px;
-  background: var(--kartu);
-  color: var(--teks);
-  font: inherit;
-  font-size: 0.88rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-.chip:hover { border-color: var(--hijau); }
-.chip[aria-pressed="true"] {
-  background: var(--hijau-tua);
-  border-color: var(--hijau-tua);
-  color: #fff;
-}
-.chip:focus-visible { outline: 3px solid var(--emas); outline-offset: 2px; }
+      <h2 id="judul-daftar" class="bagian-judul" hidden>Berita lainnya</h2>
+      <div id="daftar" class="daftar" aria-live="polite"></div>
 
-#utama-wadah:not(:empty) { margin-bottom: 8px; }
-.daftar { padding-bottom: 24px; }
+      <div class="lebih-wadah">
+        <button id="lebih" class="tombol" type="button" hidden>Tampilkan lebih banyak</button>
+      </div>
+    </div>
+  </main>
 
-.kosong {
-  grid-column: 1 / -1;
-  padding: 40px 20px;
-  text-align: center;
-  color: var(--teks-lembut);
-  background: var(--kartu);
-  border: 1px dashed var(--garis);
-  border-radius: var(--radius);
-}
-.lebih-wadah { text-align: center; padding-bottom: 56px; }
-.tombol {
-  display: inline-block;
-  padding: 11px 24px;
-  border: 0;
-  border-radius: 999px;
-  background: var(--hijau-tua);
-  color: #fff;
-  font: inherit;
-  font-weight: 600;
-  cursor: pointer;
-}
-.tombol:hover { background: var(--hijau); text-decoration: none; }
-.tombol:focus-visible { outline: 3px solid var(--emas); outline-offset: 3px; }
-.tombol[hidden] { display: none; }
+  <footer class="footer">
+    <div class="wadah">
+      <strong>Pondok Pesantren Madinah</strong> &middot; Bandar Lampung, Lampung
+    </div>
+  </footer>
 
-.bagikan {
-  margin-top: 32px;
-  padding-top: 20px;
-  border-top: 1px solid var(--garis);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
-  color: var(--teks-lembut);
-}
-.terkait { max-width: var(--lebar); margin: 0 auto; padding: 0 20px 56px; }
-.terkait .daftar { padding-bottom: 0; }
-.menu a.luar { color: var(--emas-muda); }
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
