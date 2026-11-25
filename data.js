@@ -10,14 +10,14 @@ const SITUS_UTAMA = "/";
 const BERITA = [
   {
     id: "pembuatan-parit-dan-pengerasan-jalan-di-pondok-pesantren-madinah",       // unik, huruf kecil, pakai tanda hubung
-    judul: "pembuatan parit dan pengerasan jalan di pondok pesantren madinah",
+    judul: "PLN UID S2JB Realisasikan Program TJSL Jalan dan Parit di Ponpes Madinah Muara Tembesi",
     kategori: "Berita",
     tanggal: "2026-11-20",                    // format: TAHUN-BULAN-TANGGAL
     ringkasan: "Pendaftaran dibuka mulai bulan ini. Calon santri bisa mendaftar langsung ke pondok atau melalui WhatsApp panitia.",
     gambar: "img/bantuan.jpg",                               // contoh: "img/pendaftaran.jpg" (kosong = kotak hijau)
     alt: "",                                  // deskripsi gambar, untuk aksesibilitas
     isi: [
-      "Pondok Pesantren Madinah resmi membuka pendaftaran santri baru untuk tahun ajaran 2027/2028. Pendaftaran bisa dilakukan langsung di pondok maupun melalui panitia.",
+      "BATANG HARI – Akses menuju Pondok Pesantren Madinah di Kelurahan Kampung Baru, Kecamatan Muara Tembesi, Kabupaten Batang Hari, Provinsi Jambi, kini jauh lebih layak, aman, dan tertata. Kondisi jalan yang sebelumnya kurang memadai serta rawan genangan air saat musim hujan telah diperbaiki melalui program Tanggung Jawab Sosial dan Lingkungan (TJSL) PT PLN (Persero) Unit Induk Distribusi Sumatera Selatan, Jambi, dan Bengkulu (UID S2JB).",
       { sub: "Syarat pendaftaran" },
       "Ini contoh isi berita. Ganti dengan syarat, jadwal, atau informasi sebenarnya. Satu paragraf sebaiknya memuat satu gagasan agar mudah dibaca di HP.",
       { kutipan: "Contoh kutipan dari pengasuh atau narasumber ditulis seperti ini." },
