@@ -13,7 +13,7 @@ const BERITA = [
     judul: "PLN UID S2JB Realisasikan Program TJSL Jalan dan Parit di Ponpes Madinah Muara Tembesi",
     kategori: "Berita",
     tanggal: "2026-11-20",                    // format: TAHUN-BULAN-TANGGAL
-    ringkasan: "Pendaftaran dibuka mulai bulan ini. Calon santri bisa mendaftar langsung ke pondok atau melalui WhatsApp panitia.",
+    ringkasan: "PLN UID S2JB Bangun Jalan dan Parit di Ponpes Madinah Muara Tembesi.",
     gambar: "img/bantuan.jpg",                               // contoh: "img/pendaftaran.jpg" (kosong = kotak hijau)
     alt: "",                                  // deskripsi gambar, untuk aksesibilitas
     isi: [
