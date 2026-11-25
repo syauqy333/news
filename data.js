@@ -18,8 +18,7 @@ const BERITA = [
     alt: "",                                  // deskripsi gambar, untuk aksesibilitas
     isi: [
       "BATANG HARI – Akses menuju Pondok Pesantren Madinah di Kelurahan Kampung Baru, Kecamatan Muara Tembesi, Kabupaten Batang Hari, Provinsi Jambi, kini jauh lebih layak, aman, dan tertata. Kondisi jalan yang sebelumnya kurang memadai serta rawan genangan air saat musim hujan telah diperbaiki melalui program Tanggung Jawab Sosial dan Lingkungan (TJSL) PT PLN (Persero) Unit Induk Distribusi Sumatera Selatan, Jambi, dan Bengkulu (UID S2JB).",
-      { sub: "Syarat pendaftaran" },
-      "Ini contoh isi berita. Ganti dengan syarat, jadwal, atau informasi sebenarnya. Satu paragraf sebaiknya memuat satu gagasan agar mudah dibaca di HP.",
+      "Program TJSL tahun 2026 ini difokuskan pada pembangunan saluran drainase (parit) dan pengerasan jalan menuju lingkungan pesantren dengan estimasi pengerjaan sekitar 90 hari kerja. Dari dokumentasi lapangan, jalur yang semula berupa tanah berlubang dan tergenang kini telah diperkeras dengan material batu serta dilengkapi saluran parit di sisi jalan sehingga aliran air lebih terkendali.",
       { kutipan: "Contoh kutipan dari pengasuh atau narasumber ditulis seperti ini." },
       "Untuk informasi lebih lanjut, hubungi panitia melalui WhatsApp pondok."
     ]
