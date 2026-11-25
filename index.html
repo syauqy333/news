@@ -5,16 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>News Ponpes Madinah</title>
   <meta name="description" content="Kabar terbaru dan kegiatan Pondok Pesantren Madinah.">
+  
+  <!-- Favicon menggunakan logo -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="news.css">
+
+  <style>
+    /* Pengaturan Logo & Pemotongan Sudut Putih */
+    .merek {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-ponpes {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%; /* Memotong pinggiran putih di sudut menjadi bulat */
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Penyesuaian agar nyaman dilihat di HP / Mobile */
+    @media (max-width: 640px) {
+      .header .wadah {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .merek {
+        font-size: 1.05rem;
+        gap: 8px;
+      }
+
+      .logo-ponpes {
+        width: 34px;
+        height: 34px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+      }
+
+      .judul-halaman h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+
+      .judul-halaman p {
+        font-size: 0.92rem;
+      }
+
+      /* Kolom pencarian & filter lebih nyaman disentuh di layar HP */
+      .alat {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .cari {
+        width: 100%;
+        font-size: 16px; /* Mencegah auto-zoom saat mengetik di browser HP */
+        padding: 10px 14px;
+      }
+
+      .filter {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .filter button {
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+    }
+  </style>
 </head>
 <body data-halaman="daftar">
 
   <header class="header">
     <div class="wadah">
-      <a class="merek" href="index.html">News Ponpes Madinah</a>
+      <a class="merek" href="index.html">
+        <img src="logo.jpg" alt="Logo Pondok Pesantren Madinah" class="logo-ponpes">
+        <span>News Ponpes Madinah</span>
+      </a>
       <nav aria-label="Menu utama">
         <ul class="menu">
           <li><a href="index.html" aria-current="page">Berita</a></li>
