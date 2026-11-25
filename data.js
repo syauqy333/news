@@ -9,9 +9,9 @@ const SITUS_UTAMA = "/";
 
 const BERITA = [
   {
-    id: "pendaftaran-santri-baru-2027",       // unik, huruf kecil, pakai tanda hubung
-    judul: "Pendaftaran Santri Baru Tahun Ajaran 2027/2028 Resmi Dibuka",
-    kategori: "Pengumuman",
+    id: "pembuatan-parit-dan-pengerasan-jalan-di-pondok-pesantren-madinah",       // unik, huruf kecil, pakai tanda hubung
+    judul: "pembuatan parit dan pengerasan jalan di pondok pesantren madinah",
+    kategori: "Berita",
     tanggal: "2026-11-20",                    // format: TAHUN-BULAN-TANGGAL
     ringkasan: "Pendaftaran dibuka mulai bulan ini. Calon santri bisa mendaftar langsung ke pondok atau melalui WhatsApp panitia.",
     gambar: "",                               // contoh: "img/pendaftaran.jpg" (kosong = kotak hijau)
