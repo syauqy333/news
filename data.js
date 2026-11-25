@@ -1,0 +1,99 @@
+/* =========================================================
+   data.js — SEMUA BERITA DITULIS DI SINI
+   Tambah berita baru: salin satu blok { ... } di bawah,
+   taruh di bagian ATAS daftar, lalu ubah isinya.
+   ========================================================= */
+
+// Alamat website utama pondok (untuk link "Situs Ponpes" di menu)
+const SITUS_UTAMA = "/";
+
+const BERITA = [
+  {
+    id: "pendaftaran-santri-baru-2027",       // unik, huruf kecil, pakai tanda hubung
+    judul: "Pendaftaran Santri Baru Tahun Ajaran 2027/2028 Resmi Dibuka",
+    kategori: "Pengumuman",
+    tanggal: "2026-11-20",                    // format: TAHUN-BULAN-TANGGAL
+    ringkasan: "Pendaftaran dibuka mulai bulan ini. Calon santri bisa mendaftar langsung ke pondok atau melalui WhatsApp panitia.",
+    gambar: "",                               // contoh: "img/pendaftaran.jpg" (kosong = kotak hijau)
+    alt: "",                                  // deskripsi gambar, untuk aksesibilitas
+    isi: [
+      "Pondok Pesantren Madinah resmi membuka pendaftaran santri baru untuk tahun ajaran 2027/2028. Pendaftaran bisa dilakukan langsung di pondok maupun melalui panitia.",
+      { sub: "Syarat pendaftaran" },
+      "Ini contoh isi berita. Ganti dengan syarat, jadwal, atau informasi sebenarnya. Satu paragraf sebaiknya memuat satu gagasan agar mudah dibaca di HP.",
+      { kutipan: "Contoh kutipan dari pengasuh atau narasumber ditulis seperti ini." },
+      "Untuk informasi lebih lanjut, hubungi panitia melalui WhatsApp pondok."
+    ]
+  },
+  {
+    id: "lomba-tahfidz-provinsi",
+    judul: "Santri Ikuti Lomba Tahfidz Tingkat Provinsi",
+    kategori: "Kegiatan",
+    tanggal: "2026-11-15",
+    ringkasan: "Tiga santri Madinah mewakili pondok dalam lomba tahfidz yang digelar di Bandar Lampung.",
+    gambar: "",
+    alt: "",
+    isi: [
+      "Tiga santri Madinah mewakili pondok dalam lomba tahfidz tingkat provinsi. Ganti paragraf ini dengan isi berita yang sebenarnya."
+    ]
+  },
+  {
+    id: "kajian-kitab-kuning-rutin",
+    judul: "Kajian Kitab Kuning Rutin Setiap Ba'da Subuh",
+    kategori: "Kajian",
+    tanggal: "2026-11-10",
+    ringkasan: "Kajian terbuka untuk santri dan masyarakat sekitar, dipandu langsung oleh para ustaz.",
+    gambar: "",
+    alt: "",
+    isi: [
+      "Kajian kitab kuning diadakan rutin setiap ba'da Subuh dan terbuka untuk masyarakat sekitar. Ganti dengan isi berita yang sebenarnya."
+    ]
+  },
+  {
+    id: "asrama-putra-selesai-direnovasi",
+    judul: "Asrama Putra Selesai Direnovasi",
+    kategori: "Fasilitas",
+    tanggal: "2026-11-03",
+    ringkasan: "Renovasi meliputi kamar mandi, ruang belajar, dan penambahan ventilasi di setiap kamar.",
+    gambar: "",
+    alt: "",
+    isi: [
+      "Renovasi asrama putra telah selesai. Ganti dengan isi berita yang sebenarnya."
+    ]
+  },
+  {
+    id: "bakti-sosial-santri",
+    judul: "Bakti Sosial Santri untuk Warga Sekitar",
+    kategori: "Sosial",
+    tanggal: "2026-10-28",
+    ringkasan: "Santri membagikan paket sembako dan membersihkan lingkungan masjid bersama warga.",
+    gambar: "",
+    alt: "",
+    isi: [
+      "Santri bersama warga mengadakan bakti sosial. Ganti dengan isi berita yang sebenarnya."
+    ]
+  },
+  {
+    id: "juara-pidato-bahasa-arab",
+    judul: "Juara Pidato Bahasa Arab Antarpesantren",
+    kategori: "Prestasi",
+    tanggal: "2026-10-20",
+    ringkasan: "Santri kelas XI membawa pulang juara pertama dalam lomba pidato bahasa Arab.",
+    gambar: "",
+    alt: "",
+    isi: [
+      "Santri kelas XI meraih juara pertama lomba pidato bahasa Arab. Ganti dengan isi berita yang sebenarnya."
+    ]
+  },
+  {
+    id: "jadwal-libur-semester-ganjil",
+    judul: "Jadwal Libur dan Kepulangan Santri Semester Ganjil",
+    kategori: "Pengumuman",
+    tanggal: "2026-10-12",
+    ringkasan: "Santri pulang bertahap sesuai jadwal. Wali santri diminta memeriksa jadwal lengkap.",
+    gambar: "",
+    alt: "",
+    isi: [
+      "Santri pulang secara bertahap sesuai jadwal. Ganti dengan isi berita yang sebenarnya."
+    ]
+  }
+];

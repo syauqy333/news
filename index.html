@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Ponpes Madinah</title>
+  <meta name="description" content="Kabar terbaru dan kegiatan Pondok Pesantren Madinah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="news.css">
+</head>
+<body data-halaman="daftar">
+
+  <header class="header">
+    <div class="wadah">
+      <a class="merek" href="index.html">News Ponpes Madinah</a>
+      <nav aria-label="Menu utama">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Berita</a></li>
+          <li><a class="luar" href="/" data-situs>Situs Ponpes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wadah">
+      <section class="judul-halaman">
+        <h1>News Ponpes Madinah</h1>
+        <p>Kabar terbaru, kegiatan santri, dan pengumuman dari Pondok Pesantren Madinah.</p>
+      </section>
+
+      <div class="alat">
+        <input id="cari" class="cari" type="search" placeholder="Cari berita" aria-label="Cari berita">
+        <div id="filter" class="filter" role="group" aria-label="Filter kategori"></div>
+      </div>
+
+      <div id="utama-wadah"></div>
+
+      <h2 id="judul-daftar" class="bagian-judul" hidden>Berita lainnya</h2>
+      <div id="daftar" class="daftar" aria-live="polite"></div>
+
+      <div class="lebih-wadah">
+        <button id="lebih" class="tombol" type="button" hidden>Tampilkan lebih banyak</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wadah">
+      <strong>Pondok Pesantren Madinah</strong> &middot; Bandar Lampung, Lampung
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
